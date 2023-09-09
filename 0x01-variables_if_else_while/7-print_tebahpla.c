@@ -10,10 +10,10 @@ int main(void)
 {
 	int letter;
 
-	for (letter = 122;  <= 97; letter++)
+	for (letter = 122; letter >= 97; letter--)
 	{
-		putchar((char)i);
+		putchar((char)letter);
 	}
 	putchar('\n')
-	return (n);
+	return (0);
 }
