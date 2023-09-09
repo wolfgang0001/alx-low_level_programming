@@ -1,4 +1,4 @@
-#inculde <stdio.h>
+#include <stdio.h>
 /**
  * main - Entry point
  *
@@ -8,11 +8,12 @@
  */
 int main(void)
 {
-		char i[26] = "zyxwvutsrqponmlkjihfedcba";
-		int letter;
-	for (letter = 0; letter < 26; letter++)
+	int letter;
+
+	for (letter = 122;  <= 97; letter++)
 	{
-		putchar(i[letter]);
-		putchar(10)
+		putchar((char)i);
 	}
-	return (0);	
+	putchar('\n')
+	return (n);
+}
