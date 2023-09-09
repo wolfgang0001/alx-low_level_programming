@@ -10,7 +10,7 @@ int main(void)
 
 	for (numbers = 48; numbers < 50; numbers++)
 	{
-		printf(numbers);
+		printf("%d", numbers);
 	}
 	putchar('\n');
 	return ();
