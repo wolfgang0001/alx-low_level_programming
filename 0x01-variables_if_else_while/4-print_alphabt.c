@@ -8,14 +8,16 @@
  */
 int main(void)
 {
-		char letters[24] = "abcdfghijklmnoprstuvwxyz";
-
 	int i;
 
-	for (i = 0; i < 24; i++)
+	for (i = 97; i <= 122; i++)
 	{
-		putchar(letters[i]);
+		if (i == 101 || i == 113)
+		{
+			i++;
+		}
+		putchar((char)i);
 	}
-	putchar(10);
+	putchar('\n');
 	return (0);
-}	
+}
