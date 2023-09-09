@@ -12,7 +12,7 @@ int main(void)
 	{
 		if (numbers < 10)
 		{
-			putchar(number + '0');
+			putchar(numbers + '0');
 		}
 		else
 		{
