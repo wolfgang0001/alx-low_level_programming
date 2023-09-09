@@ -1,4 +1,4 @@
-#inculde <stdio.h>
+#include <stdio.h>
 /**
  * main - Entry point
  *
@@ -8,10 +8,12 @@
  */
 int main(void)
 {
-		int numbers;
-	for (numbers = 48; numbers < 58; numbers++)
+	int numbers;
+
+	for (numbers = 0; numbers < 10; numbers++)
 	{
-		putchar(numbers);
+		putchar(numbers + '0');
 	}
-		putchar(10)
-	return (0);		
+	putchar('\n');
+	return (0);
+}
