@@ -1,1 +1,0 @@
-0x07-pointers_arrays_strings_and_fuctions_in_programming
