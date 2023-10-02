@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * main - prints all arguments 
- * @argc: the value of arguments
+ * main - prints all arguments it receives
+ * @argc: the number of arguments
  * @argv: the string array of arguments
- * Return: always 0 success
+ * Return: always 0
  */
 
 int main(int argc, char *argv[])
@@ -17,3 +17,4 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+
