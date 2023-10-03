@@ -1,26 +1,25 @@
 #include "main.h"
-
 /**
- * str_concat - two strings
- * @sa: a string
- * @sb: b string
+ * str_concat - two strings.
+ * @s1: 1st string
+ * @s2: 2nd second string
  * Return: a pointer to a newly allocated memory containing s1 and s2
  */
 
-char *str_concat(char *sa, char *sb)
+char *str_concat(char *s1, char *s2)
 {
 	int l1 = 0, l2 = 0, i = 0, j = 0, len;
 	char *strArr;
 
 	if (s1 != NULL)
 	{
-		while (sa[i++] != '\0')
+		while (s1[i++] != '\0')
 			l1++;
 	}
 	if (s2 != NULL)
 	{
 		i = 0;
-		while (sb[i++] != '\0')
+		while (s2[i++] != '\0')
 			l2++;
 	}
 
@@ -29,9 +28,9 @@ char *str_concat(char *sa, char *sb)
 	if (strArr == NULL)
 		return (NULL);
 	for (i = 0; i < l1; i++)
-		strArr[i] = sa[i];
+		strArr[i] = s1[i];
 	for (j = 0; j < l2; j++, i++)
-		strArr[i] = sb[j];
+		strArr[i] = s2[j];
 	strArr[len] = '\0';
 
 	return (strArr);
