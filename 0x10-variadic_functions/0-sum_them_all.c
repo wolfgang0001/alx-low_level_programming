@@ -1,6 +1,9 @@
 #include "variadic_functions.h"
 #include <stdio.h>
-/***/
+/**
+ * sum_them_all - calcuating the whole no
+ * Return 0 success
+ */
 
 int sum_them_all(const unsigned int n, ...)
 {
