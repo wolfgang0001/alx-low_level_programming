@@ -1,52 +1,46 @@
 #include "variadic_functions.h"
+#include <stdio.h>
+#include <stdarg.h>
+
 
 /**
- * print_all - prints everything
- * @: ..
- * @format: listing types of arguments
- */
-
-void print_all(const char * const format, ...)
-{
-	int i;
-	char *str;
-	int flag;
-	va_list args;
-
-	va_start(args, format);
-	i = 0;
-	while (format != NULL && format[i] != '\0')
+ * print_strings - Prints strings, followed by a new line.
+	* @separator: The string to be printed between strings.
+	 * @n: The number of strings passed to the function.
+	 * @...: A variable number of strings to be printed.
+	 *
+* Description: If separator is NULL, it is not printed.
+*              If one of the strings if NULL, (nil) is printed instead.
+*/
+	void print_strings(const char *separator, const unsigned int n, ...)
 	{
-		switch (format[i])
-		{
-			case 'c':
-				printf("%c", va_arg(args, int));
-				flag = 0;
-				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				flag = 0;
-				break;
-			case 'f':
-				printf("%f", va_arg(args, double));
-				flag = 0;
-				break;
-			case 's':
-				str = va_arg(args, char *);
+		va_list strings;
+		char *str;
+		unsigned int index;
 
-				if (str == NULL)
-					str = "(nil)";
+
+		va_start(strings, n);
+
+
+		for (index = 0; index < n; index++)
+		{
+			str = va_arg(strings, char *);
+
+
+			if (str == NULL)
+				printf("(nil)");
+			else
 				printf("%s", str);
-				flag = 0;
-				break;
-			default :
-				flag = 1;
-				break;
+
+
+			if (index != (n - 1) && separator != NULL)
+				printf("%s", separator);
 		}
-		if (format[i + 1] != '\0' && flag == 0)
-			printf(", ");
-		i++;
+
+
+		printf("\n");
+
+
+		va_end(strings);
 	}
-	printf("\n");
-	va_end(args);
-}
+
