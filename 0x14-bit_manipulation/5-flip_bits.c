@@ -1,7 +1,7 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * count_set_bits - set bits in the XOR
+ * count_set_bits - set bits in the XOR result
  * @n: result of XOR
  * Return: count
  */
@@ -18,4 +18,5 @@ int count_set_bits(int n)
 	}
 	return (count);
 }
+
 
