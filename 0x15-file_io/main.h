@@ -1,7 +1,9 @@
+#ifndef __HEADER__
 #define __HEADER__
 
 #include <fcntl.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 

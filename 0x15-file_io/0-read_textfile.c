@@ -1,13 +1,14 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * read_textfile - reads a text file and prints it
+ * read_textfile - reading a text file and prints it to
+ * the POSIX standard output.
  *
- * @filename: name of the file to read
- * @letters:  number of letters it should read and print
+ * @filename: the name of the file to read
+ * @letters:  the number of letters it should read
  *
  * Return: actual number of letters it could read and print,
- * 0 if file could not be opened and read
+ * 0 if file could not be opened and read or filename is NULL
  */
 
 
